@@ -4,11 +4,15 @@ on:
     types:
       - created
       - opened
-name: Cowsays
-
 jobs:
-  cow:
+  job1:
+    name: job1
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo running job1
+  job2:
     name: Cowsays
+    needs: job1
     runs-on: ubuntu-latest
     steps:
     - name: Ship it
