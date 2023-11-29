@@ -1,7 +1,9 @@
 on:
-  workflow_dispatch: [created, opened]
-
-
+  workflow_dispatch:
+  issues:
+    types:
+      - created
+      - opened
 name: Cowsays
 
 jobs:
